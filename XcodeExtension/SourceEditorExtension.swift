@@ -8,6 +8,8 @@
 import Foundation
 import XcodeKit
 
+let header42 = Header42()
+
 class SourceEditorExtension: NSObject, XCSourceEditorExtension {
     
     func extensionDidFinishLaunching() {

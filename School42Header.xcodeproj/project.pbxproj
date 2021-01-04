@@ -13,11 +13,12 @@
 		0ADF576925A36D7500F9A3EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF576725A36D7500F9A3EE /* Main.storyboard */; };
 		0ADF577525A36D7500F9A3EE /* School42HeaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF577425A36D7500F9A3EE /* School42HeaderTests.swift */; };
 		0ADF579B25A36DB700F9A3EE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADF579A25A36DB700F9A3EE /* Cocoa.framework */; };
-		0ADF579D25A36DB700F9A3EE /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADF579C25A36DB700F9A3EE /* XcodeKit.framework */; };
 		0ADF57A025A36DB700F9A3EE /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF579F25A36DB700F9A3EE /* SourceEditorExtension.swift */; };
 		0ADF57A225A36DB700F9A3EE /* Header42Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF57A125A36DB700F9A3EE /* Header42Command.swift */; };
 		0ADF57A725A36DB700F9A3EE /* XcodeExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0ADF579825A36DB700F9A3EE /* XcodeExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0ADF57B325A36EC100F9A3EE /* Header42.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF57B225A36EC000F9A3EE /* Header42.swift */; };
+		0ADF57BB25A37FE000F9A3EE /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADF579C25A36DB700F9A3EE /* XcodeKit.framework */; };
+		0ADF57BC25A37FE000F9A3EE /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADF579C25A36DB700F9A3EE /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,17 @@
 				0ADF57A725A36DB700F9A3EE /* XcodeExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ADF57BD25A37FE000F9A3EE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0ADF57BC25A37FE000F9A3EE /* XcodeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -92,7 +104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ADF579B25A36DB700F9A3EE /* Cocoa.framework in Frameworks */,
-				0ADF579D25A36DB700F9A3EE /* XcodeKit.framework in Frameworks */,
+				0ADF57BB25A37FE000F9A3EE /* XcodeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +222,7 @@
 				0ADF579425A36DB700F9A3EE /* Sources */,
 				0ADF579525A36DB700F9A3EE /* Frameworks */,
 				0ADF579625A36DB700F9A3EE /* Resources */,
+				0ADF57BD25A37FE000F9A3EE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

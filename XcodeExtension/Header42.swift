@@ -20,14 +20,13 @@ let header42Template = """
 /*   Updated: @updated                           @    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-""".split(separator: "\n").map{ String($0)}
+""".split(separator: "\n").map{ String($0) + "\n" }
 
-    private func getDateLine(with username: String) -> String {
+    private func getDateLine() -> String {
         let formater = DateFormatter()
         formater.dateFormat = "yyyy/MM/dd hh:mm:ss"
-        let dateString = formater.string(from: Date())
-        let updateLine = "\(dateString) by \(username)"
-        return updateLine
+        let dateLine = formater.string(from: Date())
+        return dateLine
     }
 
     func isHeaderXcode(in lines: NSMutableArray) -> Bool {
@@ -45,7 +44,7 @@ let header42Template = """
 
     func getFilename(from lines: NSMutableArray) -> String {
         let line = lines[1] as! String
-        return line.replacingOccurrences(of: "//  ", with: "").trimmingCharacters(in: .whitespaces)
+        return line.replacingOccurrences(of: "//  ", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
     func removeHeaderXcode(in lines: NSMutableArray) {
@@ -53,7 +52,7 @@ let header42Template = """
         lines.removeObjects(in: range)
     }
 
-    func isHeader42(lines: NSMutableArray) -> Bool {
+    func isHeader42(in lines: NSMutableArray) -> Bool {
         guard lines.count >= 6 else {
             return false
         }
@@ -79,20 +78,21 @@ let header42Template = """
         return true
     }
 
-    func updateHeader42(username: String, in lines: NSMutableArray) {
-        let index = header42Template.firstIndex(where: { $0.contains("@updated") })!
-        var templateLine = header42Template[index]
-        let startPosition = templateLine.firstIndex(of: "@")!
-        let endPosition = templateLine.lastIndex(of: "@")!
-        let replaceLen = templateLine.distance(from: startPosition, to: endPosition) + 1
-        let updateLine = getDateLine(with: username).padding(toLength: replaceLen, withPad: " ", startingAt: 0)
-        templateLine.replaceSubrange(startPosition...endPosition, with: updateLine)
-        lines[index] = templateLine
+    func updateHeader42(in lines: NSMutableArray) {
+        guard
+            let index = header42Template.firstIndex(where: { $0.contains("@updated") }),
+            var headerLine = lines[index] as? String,
+            let startPosition = headerLine.range(of: "Updated: ")?.upperBound,
+            let postEndPosition = headerLine.range(of: " by")?.lowerBound
+        else { return }
+        let endPosition = headerLine.index(before: postEndPosition)
+        headerLine.replaceSubrange(startPosition...endPosition, with: getDateLine())
+        lines[index] = headerLine
     }
 
-    func createHeader42(filename: String, username: String, email: String, in lines: NSMutableArray) {
+    func insertHeader42(filename: String, username: String, email: String, in lines: NSMutableArray) {
         var header: [String] = []
-        let timeLine = getDateLine(with: username)
+        let timeLine = getDateLine()
 
         for templateLine in header42Template {
             guard
@@ -114,7 +114,7 @@ let header42Template = """
                 replaceLine = "\(username) <\(email)>"
             case "created",
                  "updated":
-                replaceLine = timeLine
+                replaceLine = "\(timeLine) by \(username)"
             default:
                 print("Illegal id \(id)")
                 return
