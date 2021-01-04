@@ -10,17 +10,18 @@ import XcodeKit
 
 class Header42Command: NSObject, XCSourceEditorCommand {
 
-    enum Header42Error: Error, LocalizedError {
-        case hoHeader
-
-        var errorDescription: String {
-            switch self {
-            case .hoHeader: return "No school 42 ether Xcode header. Please replace filename.c"
-            }
-        }
-    }
-
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
+
+        guard
+            let username = Preferences.username,
+            let email = Preferences.email
+        else {
+            let error = NSError(domain: "",
+                                code: 1,
+                                userInfo: [NSLocalizedDescriptionKey: "No Username or Email settings"])
+            completionHandler(error)
+            return
+        }
 
         let lines = invocation.buffer.lines
 
@@ -30,11 +31,11 @@ class Header42Command: NSObject, XCSourceEditorCommand {
         } else if header42.isHeaderXcode(in: lines) {
             let filename = header42.getFilename(from: lines)
             header42.removeHeaderXcode(in: lines)
-            header42.insertHeader42(filename: filename, username: "DimaRU", email: "dimaru@42.fr", in: lines)
+            header42.insertHeader42(filename: filename, username: username, email: email, in: lines)
             completionHandler(nil)
         } else {
-            header42.insertHeader42(filename: "filename.c", username: "DimaRU", email: "dimaru@42.fr", in: lines)
-            completionHandler(Header42Error.hoHeader)
+            header42.insertHeader42(filename: "@filename.c@", username: username, email: email, in: lines)
+            completionHandler(nil)
         }
     }
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A78F3D525A394ED007E18AA /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A78F3D425A394ED007E18AA /* Preferences.swift */; };
+		0A78F3D925A39558007E18AA /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A78F3D825A39558007E18AA /* UserDefaultsWrapper.swift */; };
+		0A78F3DA25A39558007E18AA /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A78F3D825A39558007E18AA /* UserDefaultsWrapper.swift */; };
+		0A78F3DD25A395E4007E18AA /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A78F3D425A394ED007E18AA /* Preferences.swift */; };
 		0ADF576225A36D7400F9A3EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF576125A36D7400F9A3EE /* AppDelegate.swift */; };
 		0ADF576425A36D7400F9A3EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF576325A36D7400F9A3EE /* ViewController.swift */; };
 		0ADF576625A36D7500F9A3EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF576525A36D7500F9A3EE /* Assets.xcassets */; };
@@ -64,6 +68,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A78F3D425A394ED007E18AA /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		0A78F3D825A39558007E18AA /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
 		0ADF575E25A36D7400F9A3EE /* School42Header.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = School42Header.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADF576125A36D7400F9A3EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0ADF576325A36D7400F9A3EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +172,8 @@
 		0ADF579E25A36DB700F9A3EE /* XcodeExtension */ = {
 			isa = PBXGroup;
 			children = (
+				0A78F3D825A39558007E18AA /* UserDefaultsWrapper.swift */,
+				0A78F3D425A394ED007E18AA /* Preferences.swift */,
 				0ADF579F25A36DB700F9A3EE /* SourceEditorExtension.swift */,
 				0ADF57B225A36EC000F9A3EE /* Header42.swift */,
 				0ADF57A125A36DB700F9A3EE /* Header42Command.swift */,
@@ -306,6 +314,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ADF576425A36D7400F9A3EE /* ViewController.swift in Sources */,
+				0A78F3D925A39558007E18AA /* UserDefaultsWrapper.swift in Sources */,
+				0A78F3DD25A395E4007E18AA /* Preferences.swift in Sources */,
 				0ADF576225A36D7400F9A3EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,7 +333,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ADF57B325A36EC100F9A3EE /* Header42.swift in Sources */,
+				0A78F3DA25A39558007E18AA /* UserDefaultsWrapper.swift in Sources */,
 				0ADF57A025A36DB700F9A3EE /* SourceEditorExtension.swift in Sources */,
+				0A78F3D525A394ED007E18AA /* Preferences.swift in Sources */,
 				0ADF57A225A36DB700F9A3EE /* Header42Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

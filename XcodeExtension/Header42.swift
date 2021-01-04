@@ -24,7 +24,7 @@ let header42Template = """
 
     private func getDateLine() -> String {
         let formater = DateFormatter()
-        formater.dateFormat = "yyyy/MM/dd hh:mm:ss"
+        formater.dateFormat = "yyyy/MM/dd HH:mm:ss"
         let dateLine = formater.string(from: Date())
         return dateLine
     }
