@@ -22,10 +22,16 @@ let header42Template = """
 /* ************************************************************************** */
 """.split(separator: "\n").map{ String($0) + "\n" }
 
+    let getDate: () -> Date
+
+    public init(_ dateFunc: @escaping () -> Date) {
+        getDate = dateFunc
+    }
+
     private func getDateLine() -> String {
-        let formater = DateFormatter()
-        formater.dateFormat = "yyyy/MM/dd HH:mm:ss"
-        let dateLine = formater.string(from: Date())
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+        let dateLine = formatter.string(from: getDate())
         return dateLine
     }
 

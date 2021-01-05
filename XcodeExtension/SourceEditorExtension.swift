@@ -8,7 +8,9 @@
 import Foundation
 import XcodeKit
 
-let header42 = Header42()
+let header42 = Header42.init { () -> Date in
+    Date()
+}
 
 class SourceEditorExtension: NSObject, XCSourceEditorExtension {
     
