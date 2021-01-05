@@ -25,4 +25,4 @@ jobs:
 
         - name: Test
           run: |
-            set -o pipefail && xcodebuild clean test -project School42Header.xcodeproj -scheme School42Header | xcpretty
+            set -o pipefail && xcodebuild clean test -project School42Header.xcodeproj -scheme School42Header CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty
