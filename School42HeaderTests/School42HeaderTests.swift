@@ -81,11 +81,11 @@ class School42HeaderTests: XCTestCase {
 
     func testUpdateHeader() {
         let sampleDateString = "2021/01/04 15:30:40"
-        header42 = Header42({ () -> Date in
+        header42 = Header42 { () -> Date in
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
             return formatter.date(from: sampleDateString)!
-        })
+        }
 
         let result = NSMutableArray(array: sample42HeaderLines as! Array<String> , copyItems: true)
         header42.updateHeader42(in: sample42HeaderLines)

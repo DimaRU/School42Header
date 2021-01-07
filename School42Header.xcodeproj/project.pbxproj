@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A35122125A480FB007ACB09 /* Header42.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF57B225A36EC000F9A3EE /* Header42.swift */; };
 		0A78F3D525A394ED007E18AA /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A78F3D425A394ED007E18AA /* Preferences.swift */; };
 		0A78F3D925A39558007E18AA /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A78F3D825A39558007E18AA /* UserDefaultsWrapper.swift */; };
 		0A78F3DA25A39558007E18AA /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A78F3D825A39558007E18AA /* UserDefaultsWrapper.swift */; };
 		0A78F3DD25A395E4007E18AA /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A78F3D425A394ED007E18AA /* Preferences.swift */; };
+		0AA2768925A6D62F00C0DFA5 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0AA2768825A6D62E00C0DFA5 /* Credits.rtf */; };
+		0AA2769925A71E6B00C0DFA5 /* Header42.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF57B225A36EC000F9A3EE /* Header42.swift */; };
 		0ADF576225A36D7400F9A3EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF576125A36D7400F9A3EE /* AppDelegate.swift */; };
 		0ADF576425A36D7400F9A3EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF576325A36D7400F9A3EE /* ViewController.swift */; };
 		0ADF576625A36D7500F9A3EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF576525A36D7500F9A3EE /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 /* Begin PBXFileReference section */
 		0A78F3D425A394ED007E18AA /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		0A78F3D825A39558007E18AA /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
+		0AA2768825A6D62E00C0DFA5 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		0ADF575E25A36D7400F9A3EE /* School42Header.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = School42Header.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADF576125A36D7400F9A3EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0ADF576325A36D7400F9A3EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				0ADF576325A36D7400F9A3EE /* ViewController.swift */,
 				0ADF576525A36D7500F9A3EE /* Assets.xcassets */,
 				0ADF576725A36D7500F9A3EE /* Main.storyboard */,
+				0AA2768825A6D62E00C0DFA5 /* Credits.rtf */,
 				0ADF576A25A36D7500F9A3EE /* Info.plist */,
 				0ADF576B25A36D7500F9A3EE /* School42Header.entitlements */,
 			);
@@ -289,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ADF576625A36D7500F9A3EE /* Assets.xcassets in Resources */,
+				0AA2768925A6D62F00C0DFA5 /* Credits.rtf in Resources */,
 				0ADF576925A36D7500F9A3EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,7 +319,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ADF576425A36D7400F9A3EE /* ViewController.swift in Sources */,
-				0A35122125A480FB007ACB09 /* Header42.swift in Sources */,
 				0A78F3D925A39558007E18AA /* UserDefaultsWrapper.swift in Sources */,
 				0A78F3DD25A395E4007E18AA /* Preferences.swift in Sources */,
 				0ADF576225A36D7400F9A3EE /* AppDelegate.swift in Sources */,
@@ -326,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AA2769925A71E6B00C0DFA5 /* Header42.swift in Sources */,
 				0ADF577525A36D7500F9A3EE /* School42HeaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,7 +424,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -475,7 +479,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -493,6 +497,7 @@
 				CODE_SIGN_ENTITLEMENTS = School42Header/School42Header.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9BEQ8V4XH9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = School42Header/Info.plist;
@@ -500,6 +505,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = in.ioshack.School42Header;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -515,6 +521,7 @@
 				CODE_SIGN_ENTITLEMENTS = School42Header/School42Header.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9BEQ8V4XH9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = School42Header/Info.plist;
@@ -522,6 +529,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = in.ioshack.School42Header;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -576,6 +584,7 @@
 				CODE_SIGN_ENTITLEMENTS = XcodeExtension/XcodeExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9BEQ8V4XH9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = XcodeExtension/Info.plist;
@@ -584,6 +593,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = in.ioshack.School42Header.XcodeExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -597,6 +607,7 @@
 				CODE_SIGN_ENTITLEMENTS = XcodeExtension/XcodeExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9BEQ8V4XH9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = XcodeExtension/Info.plist;
@@ -605,6 +616,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = in.ioshack.School42Header.XcodeExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
