@@ -497,7 +497,7 @@
 				CODE_SIGN_ENTITLEMENTS = School42Header/School42Header.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 9BEQ8V4XH9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = School42Header/Info.plist;
@@ -505,7 +505,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = in.ioshack.School42Header;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -521,7 +521,7 @@
 				CODE_SIGN_ENTITLEMENTS = School42Header/School42Header.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 9BEQ8V4XH9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = School42Header/Info.plist;
@@ -529,7 +529,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = in.ioshack.School42Header;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -584,7 +584,7 @@
 				CODE_SIGN_ENTITLEMENTS = XcodeExtension/XcodeExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 9BEQ8V4XH9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = XcodeExtension/Info.plist;
@@ -593,7 +593,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = in.ioshack.School42Header.XcodeExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -607,7 +607,7 @@
 				CODE_SIGN_ENTITLEMENTS = XcodeExtension/XcodeExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 9BEQ8V4XH9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = XcodeExtension/Info.plist;
@@ -616,7 +616,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = in.ioshack.School42Header.XcodeExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
