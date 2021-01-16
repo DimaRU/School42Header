@@ -45,6 +45,13 @@ let header42Template = """
                 return false
             }
         }
+        if (lines[5] as! String).hasPrefix("//  Copyright") {
+            // Pre Xcode12 header
+            guard
+                lines.count >= 7,
+                (lines[6] as! String) == "//\n"
+            else { return false }
+        }
         return (lines[4] as! String).hasPrefix("//  Created by")
     }
 
@@ -54,7 +61,11 @@ let header42Template = """
     }
 
     func removeHeaderXcode(in lines: NSMutableArray) {
-        let range = NSMakeRange(0, 6)
+        var headerLineCount = 6
+        if (lines[5] as! String).hasPrefix("//  Copyright") {
+            headerLineCount = 7
+        }
+        let range = NSMakeRange(0, headerLineCount)
         lines.removeObjects(in: range)
     }
 

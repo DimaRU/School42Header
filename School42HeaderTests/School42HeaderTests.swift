@@ -32,7 +32,7 @@ class School42HeaderTests: XCTestCase {
     //  Created by User on 04.01.2021.
     //
 
-    #include <stdio.h>
+    #include "ft_file.h"
     """
 
     let sampleXcodeHeader = """
@@ -40,7 +40,7 @@ class School42HeaderTests: XCTestCase {
     //  ft_file.c
     //  ft_project
     //
-    //  Created by USer on 04.01.2021.
+    //  Created by User on 04.01.2021.
     //  Copyright © 2021 User. All rights reserved.
     //
 
@@ -91,7 +91,7 @@ class School42HeaderTests: XCTestCase {
 
         let result = NSMutableArray()
         result.add("\n")
-        result.add("#include <stdio.h>\n")
+        result.add("#include \"ft_file.h\"\n")
         header42.removeHeaderXcode(in: sampleHeader)
         XCTAssertEqual(sampleHeader, result)
     }
@@ -103,7 +103,7 @@ class School42HeaderTests: XCTestCase {
 
         let result = NSMutableArray()
         result.add("\n")
-        result.add("#include <stdio.h>\n")
+        result.add("#include \"ft_file.h\"\n")
         header42.removeHeaderXcode(in: sampleHeader)
         XCTAssertEqual(sampleHeader, result)
     }
