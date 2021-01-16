@@ -24,7 +24,7 @@ class School42HeaderTests: XCTestCase {
     /*                                                                            */
     /* ************************************************************************** */
     """
-    let sampleXcodeHeader = """
+    let sampleXcode12Header = """
     //
     //  ft_file.c
     //  ft_project
@@ -35,14 +35,28 @@ class School42HeaderTests: XCTestCase {
     #include <stdio.h>
     """
 
+    let sampleXcodeHeader = """
+    //
+    //  ft_file.c
+    //  ft_project
+    //
+    //  Created by USer on 04.01.2021.
+    //  Copyright © 2021 User. All rights reserved.
+    //
+
+    #include "ft_file.h"
+    """
+
     var sampleDate: Date!
     var sample42HeaderLines = NSMutableArray()
     var sampleXcodeHeaderLines = NSMutableArray()
+    var sampleXcode12HeaderLines = NSMutableArray()
     var header42: Header42!
 
     override func setUp() {
         sample42HeaderLines = NSMutableArray(array: sample42Header.split(separator: "\n", omittingEmptySubsequences: false).map{ $0 + "\n"})
         sampleXcodeHeaderLines = NSMutableArray(array: sampleXcodeHeader.split(separator: "\n", omittingEmptySubsequences: false).map{ $0 + "\n"})
+        sampleXcode12HeaderLines = NSMutableArray(array: sampleXcode12Header.split(separator: "\n", omittingEmptySubsequences: false).map{ $0 + "\n"})
         header42 = Header42({ () -> Date in
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
@@ -51,9 +65,17 @@ class School42HeaderTests: XCTestCase {
     }
 
     func testXcodeCheckHeader() {
-        XCTAssertTrue(header42.isHeaderXcode(in: sampleXcodeHeaderLines))
-        sampleXcodeHeaderLines.removeObject(at: 0)
-        XCTAssertFalse(header42.isHeaderXcode(in: sampleXcodeHeaderLines))
+        let sampleHeader = sampleXcodeHeaderLines
+        XCTAssertTrue(header42.isHeaderXcode(in: sampleHeader))
+        sampleHeader.removeObject(at: 0)
+        XCTAssertFalse(header42.isHeaderXcode(in: sampleHeader))
+    }
+
+    func testXcode12CheckHeader() {
+        let sampleHeader = sampleXcode12HeaderLines
+        XCTAssertTrue(header42.isHeaderXcode(in: sampleHeader))
+        sampleHeader.removeObject(at: 0)
+        XCTAssertFalse(header42.isHeaderXcode(in: sampleHeader))
     }
 
     func test42CheckHeader() {
@@ -63,14 +85,27 @@ class School42HeaderTests: XCTestCase {
     }
 
     func testXcodeHeader() {
-        let filename = header42.getFilename(from: sampleXcodeHeaderLines)
+        let sampleHeader = sampleXcodeHeaderLines
+        let filename = header42.getFilename(from: sampleHeader)
         XCTAssertEqual(filename, "ft_file.c")
 
         let result = NSMutableArray()
         result.add("\n")
         result.add("#include <stdio.h>\n")
-        header42.removeHeaderXcode(in: sampleXcodeHeaderLines)
-        XCTAssertEqual(sampleXcodeHeaderLines, result)
+        header42.removeHeaderXcode(in: sampleHeader)
+        XCTAssertEqual(sampleHeader, result)
+    }
+
+    func testXcode12Header() {
+        let sampleHeader = sampleXcode12HeaderLines
+        let filename = header42.getFilename(from: sampleHeader)
+        XCTAssertEqual(filename, "ft_file.c")
+
+        let result = NSMutableArray()
+        result.add("\n")
+        result.add("#include <stdio.h>\n")
+        header42.removeHeaderXcode(in: sampleHeader)
+        XCTAssertEqual(sampleHeader, result)
     }
 
     func testInsertHeader() {
