@@ -157,7 +157,7 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="School42Header" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="85"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="85"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="adl-Hq-dPu">
@@ -170,7 +170,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" contentType="username" translatesAutoresizingMaskIntoConstraints="NO" id="Uz3-3p-2mH">
-                                <rect key="frame" x="110" y="49" width="170" height="21"/>
+                                <rect key="frame" x="110" y="49" width="260" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="c2h-Y0-w3x">
                                     <font key="font" metaFont="system"/>
@@ -191,7 +191,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Su-Is-RR2">
-                                <rect key="frame" x="110" y="20" width="170" height="21"/>
+                                <rect key="frame" x="110" y="20" width="260" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="5WF-K6-2HF">
                                     <font key="font" metaFont="system"/>
@@ -211,7 +211,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-15" y="562.5"/>
+            <point key="canvasLocation" x="30" y="562.5"/>
         </scene>
     </scenes>
 </document>
