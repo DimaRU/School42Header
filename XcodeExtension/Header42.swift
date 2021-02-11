@@ -95,16 +95,19 @@ let header42Template = """
         return true
     }
 
-    func updateHeader42(in lines: NSMutableArray) {
+    func updateHeader42(username: String, in lines: NSMutableArray) {
         guard
             let index = header42Template.firstIndex(where: { $0.contains("@updated") }),
-            var headerLine = lines[index] as? String,
-            let startPosition = headerLine.range(of: "Updated: ")?.upperBound,
-            let postEndPosition = headerLine.range(of: " by")?.lowerBound
+            let startPosition = header42Template[index].firstIndex(of: "@"),
+            let endPosition = header42Template[index].lastIndex(of: "@")
         else { return }
-        let endPosition = headerLine.index(before: postEndPosition)
-        headerLine.replaceSubrange(startPosition...endPosition, with: getDateLine())
-        lines[index] = headerLine
+        let range = startPosition...endPosition
+        var templateLine = header42Template[index]
+        let timeLine = getDateLine()
+        let replaceLine = "\(timeLine) by \(username)"
+        let replaceLen = templateLine.distance(from: startPosition, to: endPosition) + 1
+        templateLine.replaceSubrange(range, with: replaceLine.padding(toLength: replaceLen, withPad: " ", startingAt: 0))
+        lines[index] = templateLine
     }
 
     func insertHeader42(filename: String, username: String, email: String, in lines: NSMutableArray) {

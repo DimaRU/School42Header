@@ -123,10 +123,10 @@ class School42HeaderTests: XCTestCase {
         }
 
         let result = NSMutableArray(array: sample42HeaderLines as! Array<String> , copyItems: true)
-        header42.updateHeader42(in: sample42HeaderLines)
+        header42.updateHeader42(username: "someuser",in: sample42HeaderLines)
         XCTAssertNotEqual(result, sample42HeaderLines)
 
-        result[8] = "/*   Updated: 2021/01/04 15:30:40 by User             ###   ########.fr       */\n"
+        result[8] = "/*   Updated: 2021/01/04 15:30:40 by someuser         ###   ########.fr       */\n"
 
         XCTAssertEqual(result, sample42HeaderLines)
     }

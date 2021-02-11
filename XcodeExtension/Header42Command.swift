@@ -26,7 +26,7 @@ class Header42Command: NSObject, XCSourceEditorCommand {
         let lines = invocation.buffer.lines
 
         if header42.isHeader42(in: lines) {
-            header42.updateHeader42(in: lines)
+            header42.updateHeader42(username: username, in: lines)
             completionHandler(nil)
         } else if header42.isHeaderXcode(in: lines) {
             let filename = header42.getFilename(from: lines)
