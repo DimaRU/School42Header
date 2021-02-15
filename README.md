@@ -14,8 +14,11 @@
 
 - Download latest *School42Header* package from the [Releases](https://github.com/DimaRU/School42Header/releases).
 - Copy *School42Header* to your *Applications* folder.
-- Launch *School42Header* once. You can close it immediately afterwards.
-- Go to <kbd>System Preferences</kbd> > <kbd>Extensions</kbd> > <kbd>Xcode Source Editor</kbd> > select <kbd>Header 42</kbd>
+- Launch *School42Header* once and enter your Username and Email. You can close it immediately afterwards.
+![](Screenshot/Screen_Shot_01.png)
+- Launch <kbd>System Preferences</kbd>
+- Select <kbd>Extensions</kbd> > <kbd>Xcode Source Editor</kbd> and enable  <kbd>Header 42</kbd>
+![](Screenshot/Screen_Shot_02.png)
 
 ## Setting Hotkey in Xcode
 
